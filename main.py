@@ -3,7 +3,7 @@ import numpy as np
 
 if __name__=='__main__':
 
-    #q to R test
+    #q to R test#
     '''pose_quat11=np.array([0.0633993,-0.2808802,0.0389721,0.9568532])
     pose_quat12 = np.array([0.0061888, -0.3262824, 0.0056991, 0.9452349])
     pose_quat21 = np.array([0.0006064, -0.0299213, -0.0224097, 0.9993008])
