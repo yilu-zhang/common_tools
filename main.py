@@ -2,7 +2,9 @@ import pose_converter as pcon
 import numpy as np
 
 if __name__=='__main__':
-    pose_quat11=np.array([0.0633993,-0.2808802,0.0389721,0.9568532])
+
+    #q to R test
+    '''pose_quat11=np.array([0.0633993,-0.2808802,0.0389721,0.9568532])
     pose_quat12 = np.array([0.0061888, -0.3262824, 0.0056991, 0.9452349])
     pose_quat21 = np.array([0.0006064, -0.0299213, -0.0224097, 0.9993008])
     pose_quat22 = np.array([-0.0739520, -0.0972755, -0.0345085, 0.9919061])
@@ -15,4 +17,4 @@ if __name__=='__main__':
     pose_mat_1=pcon.quaternion_to_rotation_matrix(T12_1)
     pose_mat_2 = pcon.quaternion_to_rotation_matrix(T12_2)
     print(pose_mat_1)
-    print(pose_mat_2)
+    print(pose_mat_2)'''
