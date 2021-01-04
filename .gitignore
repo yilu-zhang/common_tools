@@ -1,0 +1,6 @@
+dense_RGBD/build
+feature_extract_match/build
+ICP/build
+img_process/build
+joinMap/build
+openni2/build

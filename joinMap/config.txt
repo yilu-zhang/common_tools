@@ -1,0 +1,40 @@
+-0.090 -0.375 0.012 -7.18 1 314.5 235.5 570.3422241210938 570.3422241210938 1000.0 -2 1.3 0 -1.4 -1.2
+-0.090 -0.375 0.012 -7.18 4 417.0 312.5 873.29 802.49 6000.0 -5 5
+-0.090 -0.375 0.012 -7.18 4 417.0 312.5 722.27 723.88 6000.0 -5 5
+-0.090 -0.375 0.012 -7.18 8 321.415982 245.98941 582.795354 584.395006 6000.0
+Tbc:x y z pitch i cx cy fx fy scale top down 2D_flag layer1_top layer1_down
+//"0.785398": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/2.png",
+        //"1.570796": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/3.png",
+        //"2.356194": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/4.png",
+        //"3.141593": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/5.png",
+        //"3.926991": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/6.png",
+        //"4.712389": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/7.png",
+        //"5.497787": "/home/yiluzhang/code/loui_robot_laptop_test/no_ros/3Dto2D/depth/8.png"
+
+"""
+       for i in range(num_2D_img):
+            img_out=np.zeros((480,640),dtype=np.uint8)
+            img_out[:,:] = 255
+            detal_x = layer_max_x[i] - layer_min_x[i]
+            detal_y = layer_max_y[i] - layer_min_y[i]
+            if detal_x > detal_y:       
+                scale_factor=min((img_out.shape[1]-100)/detal_x,(img_out.shape[0]-100)/detal_y)
+                ori_flag = 1
+            else:
+                scale_factor=min((img_out.shape[1]-100)/detal_y,(img_out.shape[0]-100)/detal_x)
+                ori_flag = 0
+                
+            print(scale_factor)
+            for point in point_2D[i]:
+                if ori_flag==1:
+                        #if int(scale_factor*(point[0]-layer_min_x[i]))+40>=640:
+                            #print(point[0])
+                            #print(layer_min_x[i])
+                    img_out[int(scale_factor*(layer_max_y[i]-point[1]))+50,int(scale_factor*(point[0]-layer_min_x[i]))+50] = 0
+                else:
+                    img_out[int(scale_factor*(layer_max_x[i]-point[0]))+50,int(scale_factor*(layer_max_y[i]-point[1]))+50] = 0
+            path1 = path + str(high_list[i]) + "_" + str(high_list[i]+high_thre) + "_" + str(scale_factor) +".jpg"
+            print(path1)
+            cv2.imwrite(path1,img_out)
+       """
+
