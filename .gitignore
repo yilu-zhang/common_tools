@@ -4,3 +4,5 @@ ICP/build
 img_process/build
 joinMap/build
 openni2/build
+img_process/.idea
+img_process/cmake-build-debug

@@ -10,6 +10,9 @@ include_directories( ${OpenCV_INCLUDE_DIRS})
 add_executable(change_pixel change_pixel.cpp )
 target_link_libraries(change_pixel ${OpenCV_LIBS})
 
+add_executable(teb_sim teb_sim.cpp )
+target_link_libraries(teb_sim ${OpenCV_LIBS})
+
 #add_executable(open_depth_color open_depth_color.cpp )
 #target_link_libraries(open_depth_color ${OpenCV_LIBS} libOpenNI2.so)
 
