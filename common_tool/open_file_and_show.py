@@ -24,6 +24,20 @@ if __name__=='__main__':
     sys.exit()
   memory_u,cpu_u =  open_file(sys.argv[1])
   memory_oe,cpu_oe =  open_file(sys.argv[2])
+  cpu_u_sum = 0.0
+  cpu_u_cnt = 0
+  for data in cpu_u:
+    cpu_u_sum = cpu_u_sum + data
+    cpu_u_cnt = cpu_u_cnt + 1
+  print("map cpu average : ", cpu_u_sum/cpu_u_cnt,"%")
+  
+  cpu_oe_sum = 0.0
+  cpu_oe_cnt = 0
+  for data in cpu_oe:
+    cpu_oe_sum = cpu_oe_sum + data
+    cpu_oe_cnt = cpu_oe_cnt + 1
+  print("local cpu average : ", cpu_oe_sum/cpu_oe_cnt,"%")
+  
   #print(memory_u)
   #print(cpu_u)
   plt_save_path = sys.argv[3] + "/"
@@ -44,8 +58,8 @@ if __name__=='__main__':
   plt.title("Memory comparision chart") 
   plt.xlabel("t [s]") 
   plt.ylabel("Memory [MB]") 
-  plt.plot(x,y1,color='r',linewidth=0.5,linestyle="-",label="Ubuntu",alpha = 1)
-  plt.plot(x,y2,color='b',linewidth=0.5,linestyle="-",label="OpenEuler",alpha = 1)
+  plt.plot(x,y1,color='r',linewidth=0.5,linestyle="-",label="carto",alpha = 1)
+  plt.plot(x,y2,color='b',linewidth=0.5,linestyle="-",label="amcl",alpha = 1)
   plt.legend(loc="lower center")
   plt.savefig(plt_save_name_m)
   plt.show()
@@ -54,9 +68,10 @@ if __name__=='__main__':
   plt.title("CPU comparision chart") 
   plt.xlabel("t [s]") 
   plt.ylabel("CPU [%]") 
-  plt.plot(x,y3,color='r',linewidth=0.5,linestyle="-",label="Ubuntu",alpha = 1)
-  plt.plot(x,y4,color='b',linewidth=0.5,linestyle="-",label="OpenEuler",alpha = 1)
-  plt.legend(loc="upper center")
+  plt.plot(x,y3,color='r',linewidth=0.5,linestyle="-",label="carto",alpha = 1)
+  plt.plot(x,y4,color='b',linewidth=0.5,linestyle="-",label="amcl",alpha = 1)
+  # plt.legend(loc="upper center")
+  plt.legend(loc="upper left")
   plt.savefig(plt_save_name_c)
   plt.show()
 
