@@ -6,3 +6,4 @@ joinMap/build
 openni2/build
 img_process/.idea
 img_process/cmake-build-debug
+build/
